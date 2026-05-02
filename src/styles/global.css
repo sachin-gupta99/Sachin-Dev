@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 font-sans text-slate-300 antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .section {
+    @apply relative mx-auto max-w-5xl px-6 py-16 sm:py-20 md:py-28;
+  }
+
+  .section-heading {
+    @apply mb-4 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.25em] text-slate-500;
+  }
+
+  .section-heading::before {
+    content: '';
+    @apply inline-block h-px w-8 bg-slate-700;
+  }
+
+  .display-title {
+    @apply font-heading text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl;
+  }
+
+  .card {
+    @apply relative overflow-hidden rounded-lg border border-white/10 bg-ink-900/50 p-6 backdrop-blur-md transition;
+  }
+
+  .card::before {
+    content: '';
+    @apply pointer-events-none absolute inset-0 opacity-0 transition duration-500;
+    background: radial-gradient(
+      320px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(154, 120, 255, 0.08),
+      transparent 45%
+    );
+  }
+
+  .card:hover {
+    @apply border-white/15;
+  }
+
+  .card:hover::before {
+    @apply opacity-100;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-0.5 font-mono text-[11px] text-slate-400 transition hover:border-white/20 hover:text-slate-200;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-1 text-slate-300 transition hover:text-white;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-0 bg-slate-500 transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-md border border-accent/35 bg-accent/[0.08] px-5 py-2.5 text-sm font-medium text-accent-soft transition hover:border-accent/50 hover:bg-accent/[0.12];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.02] px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-white/20 hover:text-white;
+  }
+}
+
+@layer utilities {
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+}
