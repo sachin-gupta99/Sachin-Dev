@@ -17,7 +17,7 @@ export const experience: ExperienceEntry[] = [
     end: 'Present',
     highlights: [
       'Own end-to-end UI development for critical internal financial applications — architecting the front-end from scratch and translating UI/UX designs into production-ready, maintainable code.',
-      'Shipped 2000+ commits across 30+ repositories in the first year, building full-stack features with React, Java (Spring Boot), and AWS services while maintaining high code quality.',
+      'Shipped 2000+ commits across 30+ repositories on an average every year, building full-stack features with React, Java (Spring Boot), and AWS services while maintaining high code quality.',
       'Reduced AWS infrastructure costs by $50,000+ annually by analyzing CloudWatch metrics, leading cross-team trade-off discussions, and implementing optimized resource configurations.',
       'Built advanced front-end capabilities with TanStack Query, React Hook Form, Zustand, AG Grid, and TinyMCE to streamline enterprise compensation management and payroll scheduling workflows.',
       'Developed real-time APIs with WebSockets and Redis Streams, integrated with MySQL/PostgreSQL to support complex payroll and incentive calculations.',
