@@ -141,3 +141,33 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Playwright MCP artifacts (snapshots, console logs, screenshots)
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Lockfile (intentionally not tracked)
+package-lock.json
+
+# Claude Code local settings
+.claude/
+
+# Local-only secrets / scratch files
+.env.local
+.env.*.local
+*.pem
+*.key
+.tmp_*
+.scratch/
