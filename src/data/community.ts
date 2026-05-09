@@ -6,20 +6,37 @@ export type Contribution = {
   kind: 'issue' | 'pr' | 'discussion' | 'talk' | 'post';
 };
 
-// TODO: Swap these stubs for the actual PR/issue URLs from your GitHub activity.
 export const contributions: Contribution[] = [
   {
-    project: 'Spring AI',
-    title: 'Multi-domain metadata filtering in PgVector queries',
+    project: 'spring-projects/spring-ai',
+    title: 'Add migration guide for switching between model providers',
     description:
-      'Raised an enhancement to support multi-domain metadata filters in PgVector-backed vector stores.',
+      'Proposed a documentation guide that walks through migrating a Spring AI application between model providers — highlighting configuration, tool-calling, and prompt differences developers hit in practice.',
+    link: 'https://github.com/spring-projects/spring-ai/issues/5721',
     kind: 'issue',
   },
   {
-    project: 'LangChain4j',
-    title: 'MongoDB-backed chat memory store',
+    project: 'spring-projects/spring-ai',
+    title: 'Support multi-domain metadata filtering in PgVector queries',
     description:
-      'Proposed and discussed a MongoDB implementation for the chat memory abstraction.',
+      'Raised an enhancement to support multi-domain metadata filters on PgVector-backed vector stores, so retrieval can be scoped across tenants or content domains in a single query.',
+    link: 'https://github.com/spring-projects/spring-ai/issues/5720',
+    kind: 'issue',
+  },
+  {
+    project: 'langchain4j/langchain4j',
+    title: 'Add built-in MongoDB-backed ChatMemoryStore',
+    description:
+      'Proposed a first-class MongoDB implementation of the ChatMemoryStore abstraction so teams on MongoDB can persist conversation history without writing a custom store.',
+    link: 'https://github.com/langchain4j/langchain4j/issues/4830',
+    kind: 'issue',
+  },
+  {
+    project: 'langchain4j/langchain4j',
+    title: 'Support multi-domain metadata filtering in RAG retrieval',
+    description:
+      'Mirror of the Spring AI request — extend LangChain4j RAG retrieval to filter across multiple metadata domains, enabling multi-tenant and multi-corpus retrieval patterns.',
+    link: 'https://github.com/langchain4j/langchain4j/issues/4831',
     kind: 'issue',
   },
 ];
